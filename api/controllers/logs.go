@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	"go-gin-boilerplate/api/models"
+	"go-gin-boilerplate/api/models/logs"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -11,7 +11,7 @@ import (
 type LogsController struct{}
 
 func (controller LogsController) Index(context *gin.Context) {
-	var request models.Index
+	var request logs.Index
 
 	if err := context.ShouldBindJSON(&request); err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
