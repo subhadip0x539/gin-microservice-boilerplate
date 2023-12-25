@@ -8,5 +8,6 @@ import (
 
 func Logs(routerGroup *gin.RouterGroup) {
 	controller := new(controllers.LogsController)
+
 	routerGroup.POST("", controller.Index)
 }

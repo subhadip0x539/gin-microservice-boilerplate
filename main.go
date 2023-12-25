@@ -34,7 +34,6 @@ func main() {
 	router.Use(middlewares.CorsMiddleware())
 
 	routerGroup := router.Group("")
-
 	routes.Logs(routerGroup.Group("/logs"))
 
 	router.Run(fmt.Sprintf("%s:%d", conf.App.Host, conf.App.Port))
