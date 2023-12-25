@@ -1,0 +1,4 @@
+app:
+  name: "NAME: STRING"
+  host: "HOST: STRING"
+  port: "PORT: INTEGER"
