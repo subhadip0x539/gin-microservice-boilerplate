@@ -4,8 +4,6 @@ WORKDIR /app
 COPY . /app
 
 RUN go mod download
-RUN go build -o bin
+RUN go build -o ./build/bin .
 
-EXPOSE 5600
-
-ENTRYPOINT /app/bin
+ENTRYPOINT /app/build/bin
